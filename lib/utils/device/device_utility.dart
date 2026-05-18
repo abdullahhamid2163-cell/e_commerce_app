@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class DeviceUtility {
@@ -50,7 +49,6 @@ class DeviceUtility {
   static double getStatusBarHeight() {
     return MediaQuery.of(Get.context!).padding.top;
   }
-
 
   static double getBottomNavigationBarHeight() {
     return kBottomNavigationBarHeight;
