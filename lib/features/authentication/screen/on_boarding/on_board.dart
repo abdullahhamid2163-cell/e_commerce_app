@@ -1,0 +1,50 @@
+import 'package:e_commerce_app/features/authentication/controllers/controllers.onboarding/on_boarding_controller.dart';
+import 'package:e_commerce_app/features/authentication/screen/on_boarding/widget/on_board_navigation.dart';
+import 'package:e_commerce_app/features/authentication/screen/on_boarding/widget/on_boarding_navigation.dart';
+import 'package:e_commerce_app/features/authentication/screen/on_boarding/widget/on_boarding_page.dart';
+import 'package:e_commerce_app/features/authentication/screen/on_boarding/widget/on_boarding_skip.dart';
+import 'package:e_commerce_app/utils/constants/image_strings.dart';
+import 'package:e_commerce_app/utils/constants/text_string.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+class OnBoardScreen extends StatelessWidget {
+  const OnBoardScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final controller = Get.put(OnBoardingController());
+    return Scaffold(
+      body: Stack(
+        children: [
+          PageView(
+            controller: controller.pageController,
+            children: [
+              OnBoardingPage(
+                title: TextString.onBoardingTitle1,
+                image: AppImages.onBoardingImage1,
+                subtitle: TextString.onBoardingSubTitle1,
+              ),
+              OnBoardingPage(
+                title: TextString.onBoardingTitle2,
+                image: AppImages.onBoardingImage2,
+                subtitle: TextString.onBoardingSubTitle2,
+              ),
+              OnBoardingPage(
+                title: TextString.onBoardingTitle3,
+                image: AppImages.onBoardingImage1,
+                subtitle: TextString.onBoardingSubTitle3,
+              ),
+            ],
+          ),
+          const OnBoardingSkip(),
+
+          const OnBoardingNavigation(),
+
+          const OnBoardingNavigationButton(),
+        ],
+      ),
+    );
+  }
+}

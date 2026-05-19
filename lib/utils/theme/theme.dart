@@ -10,9 +10,11 @@ import 'package:flutter/material.dart';
 
 class Theming {
   Theming._();
-/// Light
+
+  /// Light
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
+
     appBarTheme: AppBarTheming.lightAppBarTheme,
     checkboxTheme: CheckBoxTheming.lightCheckBoxTheme,
     bottomSheetTheme: BottomSheetTheming.lightBottomSheetThemingData,
@@ -26,7 +28,7 @@ class Theming {
     elevatedButtonTheme: ElevatedButtonTheming.lightElevatedButtonTheme,
   );
 
-/// Dark  
+  /// Dark
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
     appBarTheme: AppBarTheming.darkAppBarTheme,
@@ -37,7 +39,7 @@ class Theming {
     chipTheme: ChipTheming.darkChipTheme,
     brightness: Brightness.dark,
     primaryColor: Colors.blue,
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: Colors.black,
     textTheme: TextTheming.darkTextTheme,
     elevatedButtonTheme: ElevatedButtonTheming.darkElevatedButtonTheme,
   );
