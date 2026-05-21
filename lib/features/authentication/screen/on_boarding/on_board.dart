@@ -1,5 +1,5 @@
 import 'package:e_commerce_app/features/authentication/controllers/controllers.onboarding/on_boarding_controller.dart';
-import 'package:e_commerce_app/features/authentication/screen/on_boarding/widget/on_board_Next.dart';
+import 'package:e_commerce_app/features/authentication/screen/on_boarding/widget/on_board_next_button.dart';
 import 'package:e_commerce_app/features/authentication/screen/on_boarding/widget/on_boarding_dots.dart';
 import 'package:e_commerce_app/features/authentication/screen/on_boarding/widget/on_boarding_page.dart';
 import 'package:e_commerce_app/features/authentication/screen/on_boarding/widget/on_boarding_skip.dart';
@@ -21,17 +21,17 @@ class OnBoardScreen extends StatelessWidget {
             onPageChanged: controller.updatePageIndicator,
             controller: controller.pageController,
             children: [
-              OnBoardingPage(
+              const OnBoardingPage(
                 title: TextString.onBoardingTitle1,
                 image: AppImages.onBoardingImage1,
                 subtitle: TextString.onBoardingSubTitle1,
               ),
-              OnBoardingPage(
+              const OnBoardingPage(
                 title: TextString.onBoardingTitle2,
                 image: AppImages.onBoardingImage2,
                 subtitle: TextString.onBoardingSubTitle2,
               ),
-              OnBoardingPage(
+              const OnBoardingPage(
                 title: TextString.onBoardingTitle3,
                 image: AppImages.onBoardingImage1,
                 subtitle: TextString.onBoardingSubTitle3,

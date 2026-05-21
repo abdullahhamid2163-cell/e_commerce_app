@@ -46,9 +46,11 @@ class TextString {
   static const String createAccount = 'Create Account';
   static const String orSignWith = 'Or Sign In With';
   static const String orSignUpWith = 'Or Sign Up With';
-  static const String iagreeTo = 'I Agree To';
-  static const String privacyPolicy = 'Term Of Use';
+  static const String iagreeTo = 'I agree to ';
+  static const String privacyPolicy = 'Privacy Policy';
   static const String verificationCode = 'Verification Code';
   static const String reSendEmail = 'Re Send E-Mail';
   static const String reSendEmailIn = 'Re Send E-Mail In';
+  static const String and = ' and ';
+  static const String termsOfuse = 'Terms use';
 }

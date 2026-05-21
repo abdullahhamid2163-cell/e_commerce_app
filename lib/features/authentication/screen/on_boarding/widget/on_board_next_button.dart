@@ -15,7 +15,7 @@ class OnBoardingNextButton extends StatelessWidget {
       right: AppSizes.defaultSpace,
       bottom: DeviceUtility.getBottomNavigationBarHeight(),
       child: InkWell(
-        onTap: () => OnBoardingController.instane.nextPage(),
+        onTap: () => OnBoardingController.instance.nextPage(),
         child: Container(
           height: 50,
           width: 180,
@@ -23,7 +23,7 @@ class OnBoardingNextButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             color: isDark ? AppColors.prim : AppColors.dark,
           ),
-          child: Center(
+          child: const Center(
             child: Text(
               'Get Started >>>',
               style: TextStyle(fontSize: 20, color: AppColors.light),

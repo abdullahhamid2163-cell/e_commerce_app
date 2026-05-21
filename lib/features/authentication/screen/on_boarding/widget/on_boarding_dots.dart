@@ -11,7 +11,7 @@ class OnBoardingDots extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = OnBoardingController.instane;
+    final controller = OnBoardingController.instance;
     final dark = HelperFunction.isDarkMode(context);
     return Positioned(
       bottom: DeviceUtility.getBottomNavigationBarHeight() + 25,
@@ -23,7 +23,7 @@ class OnBoardingDots extends StatelessWidget {
           dotWidth: 15,
         ),
         controller: controller.pageController,
-        onDotClicked: controller.dotNvigationClick,
+        onDotClicked: controller.dotNavigationClick,
         count: 3,
       ),
     );
