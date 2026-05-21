@@ -1,13 +1,12 @@
 import 'package:e_commerce_app/features/authentication/controllers/controllers.onboarding/on_boarding_controller.dart';
-import 'package:e_commerce_app/features/authentication/screen/on_boarding/widget/on_board_navigation.dart';
-import 'package:e_commerce_app/features/authentication/screen/on_boarding/widget/on_boarding_navigation.dart';
+import 'package:e_commerce_app/features/authentication/screen/on_boarding/widget/on_board_Next.dart';
+import 'package:e_commerce_app/features/authentication/screen/on_boarding/widget/on_boarding_dots.dart';
 import 'package:e_commerce_app/features/authentication/screen/on_boarding/widget/on_boarding_page.dart';
 import 'package:e_commerce_app/features/authentication/screen/on_boarding/widget/on_boarding_skip.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/constants/text_string.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class OnBoardScreen extends StatelessWidget {
   const OnBoardScreen({super.key});
@@ -19,6 +18,7 @@ class OnBoardScreen extends StatelessWidget {
       body: Stack(
         children: [
           PageView(
+            onPageChanged: controller.updatePageIndicator,
             controller: controller.pageController,
             children: [
               OnBoardingPage(
@@ -40,9 +40,9 @@ class OnBoardScreen extends StatelessWidget {
           ),
           const OnBoardingSkip(),
 
-          const OnBoardingNavigation(),
+          const OnBoardingDots(),
 
-          const OnBoardingNavigationButton(),
+          const OnBoardingNextButton(),
         ],
       ),
     );

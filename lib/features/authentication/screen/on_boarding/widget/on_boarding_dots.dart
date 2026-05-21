@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/features/authentication/controllers/controllers.onboarding/on_boarding_controller.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/device/device_utility.dart';
@@ -5,11 +6,12 @@ import 'package:e_commerce_app/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class OnBoardingNavigation extends StatelessWidget {
-  const OnBoardingNavigation({super.key});
+class OnBoardingDots extends StatelessWidget {
+  const OnBoardingDots({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = OnBoardingController.instane;
     final dark = HelperFunction.isDarkMode(context);
     return Positioned(
       bottom: DeviceUtility.getBottomNavigationBarHeight() + 25,
@@ -20,7 +22,8 @@ class OnBoardingNavigation extends StatelessWidget {
           dotHeight: 6,
           dotWidth: 15,
         ),
-        controller: PageController(),
+        controller: controller.pageController,
+        onDotClicked: controller.dotNvigationClick,
         count: 3,
       ),
     );
