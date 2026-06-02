@@ -11,7 +11,7 @@ class LoginHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDark = HelperFunction.isDarkMode(context);
     return Column(
-      crossAxisAlignment: .start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image(
           height: 100,

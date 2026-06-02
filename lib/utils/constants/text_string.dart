@@ -20,7 +20,7 @@ class TextString {
   static const String forgetPasswordTitle = 'Forget Password';
   static const String forgetPasswordSubTitle =
       "Don't worry some time people can forget too, enter your email and we will send u password reset link";
-  static const String changeYourPasswordTitle = 'Password Re-Set E-Mail send ';
+  static const String changeYourPasswordTitle = 'Password Reset Email sent ';
   static const String changeYourPasswordSubTitle =
       "Your account security is Our Priority! We've sent You a Source Linkto Saftey change your Password and keep Your Account Protected.";
   static const String confirmEmailTitle = 'Verfi Your E-Mail Address!';
@@ -36,6 +36,7 @@ class TextString {
   static const String firstName = 'First Name';
   static const String lastName = 'Last Name';
   static const String email = 'E-Mail';
+  static const String submit = 'Submit';
   static const String password = 'Password';
   static const String newPassword = 'New Password';
   static const String userName = 'User Name';
@@ -51,6 +52,8 @@ class TextString {
   static const String verificationCode = 'Verification Code';
   static const String reSendEmail = 'Re Send E-Mail';
   static const String reSendEmailIn = 'Re Send E-Mail In';
+  static const String passwordReSetDone = ' Done ';
   static const String and = ' and ';
   static const String termsOfuse = 'Terms use';
+  static const String continueButton = 'Continue';
 }

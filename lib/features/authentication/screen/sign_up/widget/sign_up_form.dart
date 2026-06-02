@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/common/widgets/button/custom_elevated_button.dart';
 import 'package:e_commerce_app/features/authentication/screen/sign_up/widget/terms_and_condition_check.dart';
 import 'package:e_commerce_app/features/authentication/screen/sign_up/verify_email_screen.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
@@ -67,19 +68,9 @@ class SignUpForm extends StatelessWidget {
           const SizedBox(height: AppSizes.spaceBtwSections),
           const TermsAndConditionCheck(),
           const SizedBox(height: AppSizes.spaceBtwSections),
-          InkWell(
-            onTap: () {
-              Get.to(() => const VerifyEmailScreen());
-            },
-            child: Container(
-              height: AppSizes.buttonHeight * 3,
-
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.blue,
-              ),
-              child: const Center(child: Text(TextString.createAccount)),
-            ),
+          CustomElevatedButton(
+            text: TextString.createAccount,
+            onTap: () => Get.to(() => const VerifyEmailScreen()),
           ),
         ],
       ),

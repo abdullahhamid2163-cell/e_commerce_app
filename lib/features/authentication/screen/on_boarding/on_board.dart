@@ -8,8 +8,20 @@ import 'package:e_commerce_app/utils/constants/text_string.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class OnBoardScreen extends StatelessWidget {
+class OnBoardScreen extends StatefulWidget {
   const OnBoardScreen({super.key});
+
+  @override
+  State<OnBoardScreen> createState() => _OnBoardScreenState();
+}
+
+class _OnBoardScreenState extends State<OnBoardScreen> {
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    precacheImage(const AssetImage(AppImages.onBoardingImage1), context);
+    precacheImage(const AssetImage(AppImages.onBoardingImage2), context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +32,18 @@ class OnBoardScreen extends StatelessWidget {
           PageView(
             onPageChanged: controller.updatePageIndicator,
             controller: controller.pageController,
-            children: [
-              const OnBoardingPage(
+            children: const [
+              OnBoardingPage(
                 title: TextString.onBoardingTitle1,
                 image: AppImages.onBoardingImage1,
                 subtitle: TextString.onBoardingSubTitle1,
               ),
-              const OnBoardingPage(
+              OnBoardingPage(
                 title: TextString.onBoardingTitle2,
                 image: AppImages.onBoardingImage2,
                 subtitle: TextString.onBoardingSubTitle2,
               ),
-              const OnBoardingPage(
+              OnBoardingPage(
                 title: TextString.onBoardingTitle3,
                 image: AppImages.onBoardingImage1,
                 subtitle: TextString.onBoardingSubTitle3,
@@ -39,9 +51,7 @@ class OnBoardScreen extends StatelessWidget {
             ],
           ),
           const OnBoardingSkip(),
-
           const OnBoardingDots(),
-
           const OnBoardingNextButton(),
         ],
       ),

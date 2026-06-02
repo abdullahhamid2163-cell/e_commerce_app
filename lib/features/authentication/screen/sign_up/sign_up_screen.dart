@@ -1,5 +1,5 @@
-import 'package:e_commerce_app/common/widgets.login_signup/form_divider.dart';
-import 'package:e_commerce_app/common/widgets.login_signup/social_button.dart';
+import 'package:e_commerce_app/common/widgets/login_signup/form_divider.dart';
+import 'package:e_commerce_app/common/widgets/login_signup/social_button.dart';
 import 'package:e_commerce_app/features/authentication/screen/sign_up/widget/sign_up_form.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';

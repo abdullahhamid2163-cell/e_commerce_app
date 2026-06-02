@@ -1,4 +1,8 @@
+import 'package:e_commerce_app/common/widgets/button/custom_elevated_button.dart';
+import 'package:e_commerce_app/common/widgets/button/custom_outline_button.dart';
+import 'package:e_commerce_app/features/authentication/screen/password_config/forget_password.dart';
 import 'package:e_commerce_app/features/authentication/screen/sign_up/sign_up_screen.dart';
+import 'package:e_commerce_app/navigation_menu.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/constants/text_string.dart';
 import 'package:flutter/material.dart';
@@ -43,38 +47,20 @@ class LoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const ForgetPassword()),
                   child: const Text(TextString.forgetPassword),
                 ),
               ],
             ),
             const SizedBox(height: AppSizes.spaceBtwSections),
-            InkWell(
-              onTap: () {},
-              child: Container(
-                height: AppSizes.buttonHeight * 3,
-
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.blue,
-                ),
-                child: const Center(child: Text(TextString.signIn)),
-              ),
+            CustomElevatedButton(
+              text: TextString.signIn,
+              onTap: () => Get.to(() => const NavigationMenu()),
             ),
             const SizedBox(height: AppSizes.spaceBtwItems),
-            InkWell(
-              onTap: () {
-                Get.to(() => const SignUpScreen());
-              },
-              child: Container(
-                height: AppSizes.buttonHeight * 3,
-
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  border: Border.all(color: const Color.fromARGB(255, 0, 0, 0)),
-                ),
-                child: const Center(child: Text(TextString.createAccount)),
-              ),
+            CustomOutlineButton(
+              text: TextString.createAccount,
+              onTap: () => Get.to(() => const SignUpScreen()),
             ),
           ],
         ),
